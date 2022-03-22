@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Domain.AcademicSession>
+
+@{
+    ViewBag.Title = "ViewSessions";
+}
+
+<div class="proheader">Edit Session</div>
+<div class="site-form theforms">
+    <table class="ListTable" cellpadding="0" cellspacing="0">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FYear.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.status)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FYear.Year)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.status)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditSession", new { id = item.SessionID }) |
+                   
+                    @Html.ActionLink("Delete", "Delete", new { id = item.SessionID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>

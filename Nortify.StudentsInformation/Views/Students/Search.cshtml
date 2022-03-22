@@ -1,0 +1,119 @@
+﻿@model IEnumerable<Domain.Students>
+@{
+    ViewBag.Title = "Search";
+}
+
+<div class="proheader">Search Results</div>
+<div class="site-form theforms">
+
+    <table class="ListTable" cellpadding="0" cellspacing="0">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.academicterm.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.guardian.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LaststName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OtherNames)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+
+           
+            <th>
+                @Html.DisplayNameFor(model => model.NationalityID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StateOfOriginID)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.HomeTown)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntryModeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdmissionNo)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.ClassAdmittedID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrentClassID)
+            </th>
+
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.academicterm.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.guardian.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LaststName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OtherNames)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateOfBirth)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.NationalityID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StateOfOriginID)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.HomeTown)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EntryModeID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AdmissionNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.dateAdmitted)
+                </td>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrentClassID)
+                </td>               
+                <td>
+                    @Html.ActionLink("View", "ViewProfile", new { id = item.StudentNo })
+
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

@@ -1,0 +1,180 @@
+﻿@model Domain.AcademicTerm
+
+@{
+    ViewBag.Title = "CreateTerm";
+  
+}
+
+
+<script type="text/javascript">
+    $(function() {
+        $("#Datepicker1").datepicker();
+        alert("ok");
+    });
+    </script>
+<script type="text/javascript">
+    $(function () {
+       
+        $("#Datepicker2").datepicker();
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        alert("Ok");
+    }
+
+    );
+</script>
+    <style>
+        .form-horizontal .form-group label{
+
+            font-size: 12px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            text-transform: uppercase;
+            display: block;
+            margin:0px;
+            padding:0px;
+        }
+
+    table tr td {
+        padding:6px;
+        font-size:12px;
+        font-family:Calibri;
+
+    }
+
+
+    .form-horizontal .form-group select {
+        font-family: Arial,Helvetica, sans-serif;
+        font-size: 12px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-transform: uppercase;
+        display: block;
+        margin: 0px;
+        padding-left:0px;
+    }
+
+    input[type="tex"], textarea {
+        padding: 10px;
+        margin:0px;
+        display: block;
+        width: 95%;
+        background: #fcfcfc;
+        border: none;
+        outline: none;
+        color: #464646;
+        font-size: 1em;
+        font-family: Arial, Helvetica, sans-serif;
+        box-shadow: inset 0px 0px 3px #999;
+        -webkit-box-shadow: inset 0px 0px 3px #999;
+        -moz-box-shadow: inset 0px 0px 3px #999;
+        -o-box-shadow: inset 0px 0px 3px #999;
+        -webkit-appearance: none;
+    }
+
+    textarea {
+        resize: none;
+        height: 172px;
+    }
+    .form-group {
+        margin-bottom: 8px;
+        margin-top: 6px;
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .form-horizontal
+    {
+        width:86%;
+        border-radius:5px;
+        margin:auto;
+        border:1px solid #eee;
+    }
+    .form-horizontal h4 {
+        margin:0px;
+        padding:10px;
+        background-color:#eee;
+    }
+
+    </style>
+
+    @using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+     <div class="proheader">Create Term</div>
+<div class="site-form theforms">
+
+            @Html.ValidationSummary(true)
+            <table width="70%" cellpadding="0" cellspacing="0">
+
+                <tr>
+                    <td></td>
+                    <td>
+                        @Html.DropDownList("SessionID","Select One")
+                        @Html.ValidationMessageFor(model => model.SessionID)
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>Term</td>
+                    <td>
+                        @Html.TextBoxFor(model => model.TermID)
+                        @Html.ValidationMessageFor(model => model.TermID)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>@Html.LabelFor(model => model.StartDate, new { @class = "control-label col-md-2" })</td>
+                    <td>
+                        @Html.TextBoxFor(model => model.StartDate, new { @id = "Datepicker2" })
+                        @Html.ValidationMessageFor(model => model.StartDate)
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td>@Html.LabelFor(model => model.EndDate, new { @class = "control-label col-md-2" })</td>
+                    <td>
+                        @Html.TextBoxFor(model => model.EndDate, new { @id = "Datepicker1" })
+                        @Html.ValidationMessageFor(model => model.EndDate)
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>@Html.LabelFor(model => model.IsCurrent, new { @class = "control-label col-md-2" })</td>
+                    <td>
+                        @Html.EditorFor(model => model.IsCurrent)
+                        @Html.ValidationMessageFor(model => model.IsCurrent)
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </td>
+                </tr>
+
+
+
+
+            </table>
+            <div class="clear"></div>
+        </div>
+}
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

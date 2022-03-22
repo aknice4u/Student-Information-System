@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Domain.AcademicTerm>
+
+@{
+    ViewBag.Title = "ViewTerms";
+}
+
+<div class="proheader">Edit Session</div>
+<div class="site-form theforms">
+    <table class="ListTable" cellpadding="0" cellspacing="0">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.academicsession.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TermID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsCurrent)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.academicsession.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TermID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StartDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsCurrent)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditTerm", new { id = item.ID }) |
+                   
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

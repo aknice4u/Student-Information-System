@@ -1,0 +1,109 @@
+﻿@model Domain.Students
+@using Domain.AllEnums
+@using Domain.EnumsHelpers
+@{
+    ViewBag.Title = "ViewProfile";
+}
+<script>
+    $(document).ready(function () {
+        $("tr:even").css("background-color", "#F3F4F5");
+    });
+</script>
+<div class="proheader"><span>Profile For:</span> <strong>@Model.FirstName  @Model.OtherNames  @Model.LaststName</strong></div>
+<div class="site-form theforms">
+
+
+    <table class="profile" cellpadding="0" cellspacing="0">
+
+        <tr>
+            <td colspan="2">Photo</td>
+
+        </tr>
+        <tr>
+            <td>First Name</td>
+            <td>@Html.DisplayFor(model => model.FirstName)</td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>@Html.DisplayFor(model => model.LaststName)</td>
+        </tr>
+        <tr>
+            <td>Other Name</td>
+            <td>@Html.DisplayFor(model => model.OtherNames)</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>@Html.DisplayFor(model => model.Gender)</td>
+        </tr>
+        <tr>
+            <td>Date Of Birth</td>
+            <td>@Html.DisplayFor(model => model.DateOfBirth)</td>
+        </tr>
+        <tr>
+            <td>Place Of Birth</td>
+            <td>@Html.DisplayFor(model => model.BirthPace)</td>
+        </tr>
+        <tr>
+            <td>Religion</td>
+            <td>@Html.DisplayFor(model => model.Religion)</td>
+        </tr>
+        <tr>
+            <td>Nationality</td>
+            <td>@Html.DisplayFor(model => model.NationalityID)</td>
+        </tr>
+        <tr>
+            <td>State of Origin</td>
+            <td>@Html.DisplayFor(model => model.StateOfOriginID)</td>
+        </tr>
+        <tr>
+            <td>Local Government Area</td>
+            <td>@Html.DisplayFor(model => model.LGAOfOriginID)</td>
+        </tr>
+        <tr>
+            <td>Home Town</td>
+            <td>@Html.DisplayFor(model => model.HomeTown)</td>
+        </tr>
+        <tr>
+            <td>Entry Mode</td>
+            <td>@Html.DisplayFor(model => model.EntryModeID)</td>
+        </tr>
+        <tr>
+            <td>Admission Number</td>
+            <td>@Html.DisplayFor(model => model.AdmissionNo)</td>
+        </tr>
+        <tr>
+            <td>Date Admitted</td>
+            <td>@Html.DisplayFor(model => model.dateAdmitted)</td>
+        </tr>
+        <tr>
+            <td>Class Admitted</td>
+            <td>@Html.DisplayFor(model => model.schoolclass.Name)</td>
+        </tr>
+        <tr>
+            <td>Current Class</td>
+            <td>
+                @Html.DisplayFor(model => model.schoolclass.Name)
+
+        </td>
+    </tr>
+    <tr>
+        <td>Current Term</td>
+        <td>@Html.DisplayFor(model => model.academicterm.ID)</td>
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td>@Html.DisplayFor(model => model.AddressLine1)</td>
+    </tr>
+
+    <tr>
+        <td>Guardian</td>
+        <td>@Html.DisplayFor(model => model.guardian.FirstName)</td>
+    </tr>
+
+       <tr>
+        <td colspan="2"> @Html.ActionLink("Edit", "EditStudents", new { id = Model.StudentNo })</td>
+        </tr>
+
+</table>
+
+</div>

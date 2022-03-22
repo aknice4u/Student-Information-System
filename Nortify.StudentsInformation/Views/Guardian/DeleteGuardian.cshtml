@@ -1,0 +1,256 @@
+﻿@model Domain.Guardian
+
+@{
+    ViewBag.Title = "DeleteGuardian";
+}
+
+<h2>DeleteGuardian</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Guardian</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LaststName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LaststName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherNames)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherNames)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Religion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Religion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaritalStatusID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaritalStatusID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WeddingAniversary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WeddingAniversary)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeAddressLine1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeAddressLine1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeAddressLine2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeAddressLine2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CountryOfResidenceID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CountryOfResidenceID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StateOfResidenceID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StateOfResidenceID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LGAOfResidenceID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LGAOfResidenceID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cityOfResidence)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cityOfResidence)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Occupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Occupation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Eduction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Eduction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Relationship)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Relationship)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficeAddressLine1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfficeAddressLine1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficeAddressLine2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfficeAddressLine2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficeCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfficeCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficeLGAID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfficeLGAID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficeStateID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfficeStateID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficeCountryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfficeCountryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficePhone1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfficePhone1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfficePhone2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfficePhone2)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

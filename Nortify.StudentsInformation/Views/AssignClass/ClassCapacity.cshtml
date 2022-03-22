@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "ClassCapacity";
+}
+
+<div class="top-nav-left">
+    <ul>
+        <li class="active"><a href="index.html">Create Student</a></li>
+        <li><a href="about.html">View Students</a></li>
+        <li><a href="services.html">Upload Students</a></li>
+        <li><a href="gallery.html">Assign Class</a></li>
+
+
+    </ul>
+</div>
+
+<div class="clear"></div>
+<div class="proheader">CreateStudents</div>
+<div class="site-form theforms">
+@using (Html.BeginForm())
+{
+    <label>Enter Class Capacity</label>
+    <input type="text" name="classcapacity" />
+    
+    <input type="submit" name="classcapacity" class="btn" />
+}
+
+    </div>

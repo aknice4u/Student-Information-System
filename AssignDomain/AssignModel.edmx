@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="StudentsinfoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Studentsinfo.dbo.PreAdmissionList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="PreAdmissionList">
+          <Key>
+            <PropertyRef Name="ApplicantId" />
+            <PropertyRef Name="ApplicantNo" />
+            <PropertyRef Name="Firstname" />
+            <PropertyRef Name="Lastname" />
+            <PropertyRef Name="OtherNames" />
+            <PropertyRef Name="DateOfBirth" />
+            <PropertyRef Name="Gender" />
+            <PropertyRef Name="Height" />
+            <PropertyRef Name="Weight" />
+            <PropertyRef Name="ExamNo" />
+            <PropertyRef Name="NationalityID" />
+            <PropertyRef Name="StateOfOriginID" />
+            <PropertyRef Name="HomeTown" />
+            <PropertyRef Name="ClassAdmittedID" />
+            <PropertyRef Name="ExamBatchNo" />
+            <PropertyRef Name="Photo" />
+          </Key>
+          <Property Name="ApplicantId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplicantNo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Firstname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Lastname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="OtherNames" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DateOfBirth" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gender" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Height" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Weight" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ExamNo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NationalityID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="StateOfOriginID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="HomeTown" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ClassAdmittedID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ExamBatchNo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Photo" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SchoolClasses">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Capacity" Type="int" Nullable="false" />
+          <Property Name="Arms" Type="nvarchar(max)" />
+          <Property Name="Status" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="StudentNo" />
+          </Key>
+          <Property Name="StudentNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="OtherNames" Type="nvarchar(max)" />
+          <Property Name="Gender" Type="nvarchar(max)" />
+          <Property Name="PhotoID" Type="nvarchar(max)" />
+          <Property Name="DateOfBirth" Type="nvarchar(max)" />
+          <Property Name="BirthPace" Type="nvarchar(max)" />
+          <Property Name="Religion" Type="nvarchar(max)" />
+          <Property Name="NationalityID" Type="nvarchar(max)" />
+          <Property Name="StateOfOriginID" Type="nvarchar(max)" />
+          <Property Name="LGAOfOriginID" Type="nvarchar(max)" />
+          <Property Name="HomeTown" Type="nvarchar(max)" />
+          <Property Name="EntryModeID" Type="nvarchar(max)" />
+          <Property Name="AdmissionNo" Type="nvarchar(max)" />
+          <Property Name="dateAdmitted" Type="nvarchar(max)" />
+          <Property Name="ClassAdmittedID" Type="nvarchar(max)" />
+          <Property Name="CurrentClassID" Type="nvarchar(max)" />
+          <Property Name="CurrentTermID" Type="nvarchar(max)" />
+          <Property Name="StudentCategoryID" Type="nvarchar(max)" />
+          <Property Name="AddressLine1" Type="nvarchar(max)" />
+          <Property Name="AddressLine2" Type="nvarchar(max)" />
+          <Property Name="CountryOfResidenceID" Type="nvarchar(max)" />
+          <Property Name="StateOfResidenceID" Type="nvarchar(max)" />
+          <Property Name="LGAOfResidenceID" Type="nvarchar(max)" />
+          <Property Name="CityOfResidence" Type="nvarchar(max)" />
+          <Property Name="GuardianID" Type="nvarchar(max)" />
+          <Property Name="Status" Type="nvarchar(max)" />
+          <Property Name="ID" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="StudentScores">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ApplicantID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ExamScore" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="StudentsinfoModelStoreContainer">
+          <EntitySet Name="SchoolClasses" EntityType="Self.SchoolClasses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentScores" EntityType="Self.StudentScores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PreAdmissionList" EntityType="Self.PreAdmissionList" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [PreAdmissionList].[ApplicantId] AS [ApplicantId], 
+    [PreAdmissionList].[ApplicantNo] AS [ApplicantNo], 
+    [PreAdmissionList].[Firstname] AS [Firstname], 
+    [PreAdmissionList].[Lastname] AS [Lastname], 
+    [PreAdmissionList].[OtherNames] AS [OtherNames], 
+    [PreAdmissionList].[DateOfBirth] AS [DateOfBirth], 
+    [PreAdmissionList].[Gender] AS [Gender], 
+    [PreAdmissionList].[Height] AS [Height], 
+    [PreAdmissionList].[Weight] AS [Weight], 
+    [PreAdmissionList].[ExamNo] AS [ExamNo], 
+    [PreAdmissionList].[NationalityID] AS [NationalityID], 
+    [PreAdmissionList].[StateOfOriginID] AS [StateOfOriginID], 
+    [PreAdmissionList].[HomeTown] AS [HomeTown], 
+    [PreAdmissionList].[ClassAdmittedID] AS [ClassAdmittedID], 
+    [PreAdmissionList].[ExamBatchNo] AS [ExamBatchNo], 
+    [PreAdmissionList].[Photo] AS [Photo]
+    FROM [dbo].[PreAdmissionList] AS [PreAdmissionList]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="StudentsinfoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SchoolClass">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Capacity" Type="Int32" Nullable="false" />
+          <Property Name="Arms" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Student">
+          <Key>
+            <PropertyRef Name="StudentNo" />
+          </Key>
+          <Property Name="StudentNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OtherNames" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhotoID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BirthPace" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Religion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NationalityID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StateOfOriginID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LGAOfOriginID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HomeTown" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="EntryModeID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AdmissionNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="dateAdmitted" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClassAdmittedID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CurrentClassID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CurrentTermID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StudentCategoryID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLine1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AddressLine2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CountryOfResidenceID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="StateOfResidenceID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LGAOfResidenceID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CityOfResidence" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="GuardianID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="StudentScore">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicantID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ExamScore" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PreAdmissionList">
+          <Key>
+            <PropertyRef Name="ApplicantId" />
+            <PropertyRef Name="ApplicantNo" />
+            <PropertyRef Name="Firstname" />
+            <PropertyRef Name="Lastname" />
+            <PropertyRef Name="OtherNames" />
+            <PropertyRef Name="DateOfBirth" />
+            <PropertyRef Name="Gender" />
+            <PropertyRef Name="Height" />
+            <PropertyRef Name="Weight" />
+            <PropertyRef Name="ExamNo" />
+            <PropertyRef Name="NationalityID" />
+            <PropertyRef Name="StateOfOriginID" />
+            <PropertyRef Name="HomeTown" />
+            <PropertyRef Name="ClassAdmittedID" />
+            <PropertyRef Name="ExamBatchNo" />
+            <PropertyRef Name="Photo" />
+          </Key>
+          <Property Name="ApplicantId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ApplicantNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OtherNames" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DateOfBirth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Height" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Weight" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ExamNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NationalityID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="StateOfOriginID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="HomeTown" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ClassAdmittedID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ExamBatchNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="StudentsinfoEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SchoolClasses" EntityType="Self.SchoolClass" />
+          <EntitySet Name="Students" EntityType="Self.Student" />
+          <EntitySet Name="StudentScores" EntityType="Self.StudentScore" />
+          <EntitySet Name="PreAdmissionLists" EntityType="Self.PreAdmissionList" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="StudentsinfoModelStoreContainer" CdmEntityContainer="StudentsinfoEntities">
+          <EntitySetMapping Name="SchoolClasses">
+            <EntityTypeMapping TypeName="StudentsinfoModel.SchoolClass">
+              <MappingFragment StoreEntitySet="SchoolClasses">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Capacity" ColumnName="Capacity" />
+                <ScalarProperty Name="Arms" ColumnName="Arms" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="StudentsinfoModel.Student">
+              <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="StudentNo" ColumnName="StudentNo" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="OtherNames" ColumnName="OtherNames" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="PhotoID" ColumnName="PhotoID" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="BirthPace" ColumnName="BirthPace" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="NationalityID" ColumnName="NationalityID" />
+                <ScalarProperty Name="StateOfOriginID" ColumnName="StateOfOriginID" />
+                <ScalarProperty Name="LGAOfOriginID" ColumnName="LGAOfOriginID" />
+                <ScalarProperty Name="HomeTown" ColumnName="HomeTown" />
+                <ScalarProperty Name="EntryModeID" ColumnName="EntryModeID" />
+                <ScalarProperty Name="AdmissionNo" ColumnName="AdmissionNo" />
+                <ScalarProperty Name="dateAdmitted" ColumnName="dateAdmitted" />
+                <ScalarProperty Name="ClassAdmittedID" ColumnName="ClassAdmittedID" />
+                <ScalarProperty Name="CurrentClassID" ColumnName="CurrentClassID" />
+                <ScalarProperty Name="CurrentTermID" ColumnName="CurrentTermID" />
+                <ScalarProperty Name="StudentCategoryID" ColumnName="StudentCategoryID" />
+                <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+                <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+                <ScalarProperty Name="CountryOfResidenceID" ColumnName="CountryOfResidenceID" />
+                <ScalarProperty Name="StateOfResidenceID" ColumnName="StateOfResidenceID" />
+                <ScalarProperty Name="LGAOfResidenceID" ColumnName="LGAOfResidenceID" />
+                <ScalarProperty Name="CityOfResidence" ColumnName="CityOfResidence" />
+                <ScalarProperty Name="GuardianID" ColumnName="GuardianID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentScores">
+            <EntityTypeMapping TypeName="StudentsinfoModel.StudentScore">
+              <MappingFragment StoreEntitySet="StudentScores">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ApplicantID" ColumnName="ApplicantID" />
+                <ScalarProperty Name="ExamScore" ColumnName="ExamScore" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PreAdmissionLists">
+            <EntityTypeMapping TypeName="StudentsinfoModel.PreAdmissionList">
+              <MappingFragment StoreEntitySet="PreAdmissionList">
+                <ScalarProperty Name="ApplicantId" ColumnName="ApplicantId" />
+                <ScalarProperty Name="ApplicantNo" ColumnName="ApplicantNo" />
+                <ScalarProperty Name="Firstname" ColumnName="Firstname" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="OtherNames" ColumnName="OtherNames" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="ExamNo" ColumnName="ExamNo" />
+                <ScalarProperty Name="NationalityID" ColumnName="NationalityID" />
+                <ScalarProperty Name="StateOfOriginID" ColumnName="StateOfOriginID" />
+                <ScalarProperty Name="HomeTown" ColumnName="HomeTown" />
+                <ScalarProperty Name="ClassAdmittedID" ColumnName="ClassAdmittedID" />
+                <ScalarProperty Name="ExamBatchNo" ColumnName="ExamBatchNo" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

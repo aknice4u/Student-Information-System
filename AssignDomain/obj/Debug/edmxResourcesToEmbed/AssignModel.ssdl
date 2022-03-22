@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StudentsinfoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Studentsinfo.dbo.PreAdmissionList' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="PreAdmissionList">
+    <Key>
+      <PropertyRef Name="ApplicantId" />
+      <PropertyRef Name="ApplicantNo" />
+      <PropertyRef Name="Firstname" />
+      <PropertyRef Name="Lastname" />
+      <PropertyRef Name="OtherNames" />
+      <PropertyRef Name="DateOfBirth" />
+      <PropertyRef Name="Gender" />
+      <PropertyRef Name="Height" />
+      <PropertyRef Name="Weight" />
+      <PropertyRef Name="ExamNo" />
+      <PropertyRef Name="NationalityID" />
+      <PropertyRef Name="StateOfOriginID" />
+      <PropertyRef Name="HomeTown" />
+      <PropertyRef Name="ClassAdmittedID" />
+      <PropertyRef Name="ExamBatchNo" />
+      <PropertyRef Name="Photo" />
+    </Key>
+    <Property Name="ApplicantId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicantNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Firstname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Lastname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="OtherNames" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateOfBirth" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Height" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Weight" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ExamNo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NationalityID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="StateOfOriginID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HomeTown" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ClassAdmittedID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ExamBatchNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Photo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SchoolClasses">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Code" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Capacity" Type="int" Nullable="false" />
+    <Property Name="Arms" Type="nvarchar(max)" />
+    <Property Name="Status" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="StudentNo" />
+    </Key>
+    <Property Name="StudentNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="OtherNames" Type="nvarchar(max)" />
+    <Property Name="Gender" Type="nvarchar(max)" />
+    <Property Name="PhotoID" Type="nvarchar(max)" />
+    <Property Name="DateOfBirth" Type="nvarchar(max)" />
+    <Property Name="BirthPace" Type="nvarchar(max)" />
+    <Property Name="Religion" Type="nvarchar(max)" />
+    <Property Name="NationalityID" Type="nvarchar(max)" />
+    <Property Name="StateOfOriginID" Type="nvarchar(max)" />
+    <Property Name="LGAOfOriginID" Type="nvarchar(max)" />
+    <Property Name="HomeTown" Type="nvarchar(max)" />
+    <Property Name="EntryModeID" Type="nvarchar(max)" />
+    <Property Name="AdmissionNo" Type="nvarchar(max)" />
+    <Property Name="dateAdmitted" Type="nvarchar(max)" />
+    <Property Name="ClassAdmittedID" Type="nvarchar(max)" />
+    <Property Name="CurrentClassID" Type="nvarchar(max)" />
+    <Property Name="CurrentTermID" Type="nvarchar(max)" />
+    <Property Name="StudentCategoryID" Type="nvarchar(max)" />
+    <Property Name="AddressLine1" Type="nvarchar(max)" />
+    <Property Name="AddressLine2" Type="nvarchar(max)" />
+    <Property Name="CountryOfResidenceID" Type="nvarchar(max)" />
+    <Property Name="StateOfResidenceID" Type="nvarchar(max)" />
+    <Property Name="LGAOfResidenceID" Type="nvarchar(max)" />
+    <Property Name="CityOfResidence" Type="nvarchar(max)" />
+    <Property Name="GuardianID" Type="nvarchar(max)" />
+    <Property Name="Status" Type="nvarchar(max)" />
+    <Property Name="ID" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="StudentScores">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ApplicantID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ExamScore" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="StudentsinfoModelStoreContainer">
+    <EntitySet Name="SchoolClasses" EntityType="Self.SchoolClasses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StudentScores" EntityType="Self.StudentScores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PreAdmissionList" EntityType="Self.PreAdmissionList" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [PreAdmissionList].[ApplicantId] AS [ApplicantId], 
+    [PreAdmissionList].[ApplicantNo] AS [ApplicantNo], 
+    [PreAdmissionList].[Firstname] AS [Firstname], 
+    [PreAdmissionList].[Lastname] AS [Lastname], 
+    [PreAdmissionList].[OtherNames] AS [OtherNames], 
+    [PreAdmissionList].[DateOfBirth] AS [DateOfBirth], 
+    [PreAdmissionList].[Gender] AS [Gender], 
+    [PreAdmissionList].[Height] AS [Height], 
+    [PreAdmissionList].[Weight] AS [Weight], 
+    [PreAdmissionList].[ExamNo] AS [ExamNo], 
+    [PreAdmissionList].[NationalityID] AS [NationalityID], 
+    [PreAdmissionList].[StateOfOriginID] AS [StateOfOriginID], 
+    [PreAdmissionList].[HomeTown] AS [HomeTown], 
+    [PreAdmissionList].[ClassAdmittedID] AS [ClassAdmittedID], 
+    [PreAdmissionList].[ExamBatchNo] AS [ExamBatchNo], 
+    [PreAdmissionList].[Photo] AS [Photo]
+    FROM [dbo].[PreAdmissionList] AS [PreAdmissionList]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

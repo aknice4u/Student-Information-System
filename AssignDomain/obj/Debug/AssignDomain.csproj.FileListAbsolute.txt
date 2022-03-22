@@ -1,0 +1,9 @@
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\AssignDomain\bin\Debug\AssignDomain.dll.config
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\AssignDomain\bin\Debug\AssignDomain.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\AssignDomain\bin\Debug\AssignDomain.pdb
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\AssignDomain\bin\Debug\EntityFramework.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\AssignDomain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\AssignDomain\bin\Debug\EntityFramework.xml
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\AssignDomain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\AssignDomain\obj\Debug\AssignDomain.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\AssignDomain\obj\Debug\AssignDomain.pdb

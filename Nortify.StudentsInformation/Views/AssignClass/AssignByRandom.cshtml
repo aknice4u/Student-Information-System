@@ -1,0 +1,128 @@
+﻿@model List<AssignDomain.GeneralScore>
+
+@{
+    ViewBag.Title = "AssignClass";
+}
+
+<div class="top-nav-left">
+    <ul>
+        <li class="active"><a href="index.html">Create Student</a></li>
+        <li><a href="about.html">View Students</a></li>
+        <li><a href="services.html">Upload Students</a></li>
+        <li><a href="gallery.html">Assign Class</a></li>
+
+
+    </ul>
+</div>
+<div class="clear"></div>
+
+<div class="proheader">Search Students</div>
+<div class="site-form theforms">
+    @using (Html.BeginForm())
+    {
+        <table class="ListTable" cellpadding="0" cellspacing="0">
+            <tr>
+
+                <th>
+                    FIRST NAME
+                </th>
+                <th>
+                    LAST NAME
+                </th>
+                <th>
+                    Other Names
+                </th>
+                <th>
+                    Date Of Birth
+                </th>
+                <th>
+                    Gender
+                </th>
+
+                <th>
+                    Nationality
+                </th>
+                <th>
+                    State Of Origin
+
+                </th>
+                <th>
+                    Home Town
+                </th>
+                <th></th>
+                <th></th>
+
+                <th></th>
+
+            </tr>
+
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                <tr>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem[i].FirstName)
+                        @Html.HiddenFor(modelItem => modelItem[i].FirstName, new { id = "firstname" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem[i].LastName)
+                        @Html.HiddenFor(modelItem => modelItem[i].LastName, new { id = "lastname" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem[i].OtherNames)
+                        @Html.HiddenFor(modelItem => modelItem[i].OtherNames, new { id = "othername" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem[i].DateOfBirth)
+                        @Html.HiddenFor(modelItem => modelItem[i].DateOfBirth, new { id = "firstname" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem[i].Gender)
+                        @Html.HiddenFor(modelItem => modelItem[i].Gender, new { id = "firstname" })
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem[i].NationalityID)
+                        @Html.HiddenFor(modelItem => modelItem[i].NationalityID, new { id = "firstname" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem[i].StateOfOriginID)
+                        @Html.HiddenFor(modelItem => modelItem[i].StateOfOriginID, new { id = "firstname" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem[i].HomeTown)
+                        @Html.HiddenFor(modelItem => modelItem[i].HomeTown, new { id = "firstname" })
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => modelItem[i].ExamScore)
+
+                    </td>
+                    <td>
+                        @Html.DropDownListFor(modelItem => modelItem[i].ClassAdmittedID, ViewBag.classid as IEnumerable<SelectListItem>)
+                    </td>
+
+
+                    <td>
+
+                        <input type="button" name="submit" value="Assign Class" class="headertext" />
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+        <input type="submit" name="submit" value="Submit" class="btn" />
+    }
+
+    <p>
+
+        @for (int j = 1; j <= ViewBag.TotalPages; j++)
+        {
+            <a href="@Url.Action("AssignByScore", "AssignClass", new { page = j })">@j</a>
+        }
+
+    </p>
+</div>
+
+
+

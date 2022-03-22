@@ -1,0 +1,116 @@
+﻿@model IEnumerable<Domain.Guardian>
+
+@{
+    ViewBag.Title = "ViewGuardians";
+}
+
+<div class="proheader">View Guardian</div>
+<div class="site-form theforms">
+    <table class="ListTable" cellpadding="0" cellspacing="0">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LaststName)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.HomeAddressLine1)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.CountryOfResidenceID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StateOfResidenceID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LGAOfResidenceID)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.OfficePhone1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OfficePhone2)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LaststName)
+                </td>
+                
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gender)
+                </td>
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+               
+                                
+                <td>
+                    @Html.DisplayFor(modelItem => item.HomeAddressLine1)
+                </td>
+                
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.CountryOfResidenceID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StateOfResidenceID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LGAOfResidenceID)
+                </td>
+                       
+                <td>
+                    @Html.DisplayFor(modelItem => item.OfficePhone1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OfficePhone2)
+                </td>
+                <td>
+                    @Html.ActionLink("View", "ViewDetails", new { id = item.ID })
+
+
+                </td>
+                <td>
+
+
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>

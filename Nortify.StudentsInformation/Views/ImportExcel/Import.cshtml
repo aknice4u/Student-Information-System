@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Import";
+}
+
+<h2>@ViewBag.error</h2>
+
+<div class="proheader">Upload Admission List</div>
+<div class="site-form theforms">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="space">
+        <label>Choose Excel File</label>
+        <input type="file" name="file" />
+        <input type="submit" value="Submit" />
+    </div>
+}
+    </div>

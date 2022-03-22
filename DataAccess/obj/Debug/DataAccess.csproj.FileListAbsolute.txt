@@ -1,0 +1,14 @@
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\bin\Debug\Domain.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\bin\Debug\System.Web.Mvc.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\bin\Debug\Domain.pdb
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\bin\Debug\System.Web.Mvc.xml
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\DataAccess\obj\Debug\DataAccess.pdb

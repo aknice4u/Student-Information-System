@@ -1,0 +1,57 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("Content/jQueryAssets/jquery.ui.theme.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("Content/jQueryAssets/jquery.ui.datepicker.min.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("Content/jQueryAssets/jquery-1.8.3.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("Content/jQueryAssets/jquery-ui-1.9.2.datepicker.custom.min.js")" type="text/javascript"></script>
+    <script src="~/Content/js/jquery-1.6.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="~/Content/images/logonortify.png" alt="" height="35" /></a>
+            </div>
+
+            <div class="navigation">
+                <span class="menu"><img src="images/nav.png" alt="" /></span>
+                <ul class="nav">
+                    <li>@Html.ActionLink("Academic Term", "CreateTerm", "AcademicTerm")</li>
+                    <lable>/</lable>
+                    <li>@Html.ActionLink("Academic Session", "CreateSession", "AcademicSession")</li>
+                    <lable>/</lable>
+                    <li>@Html.ActionLink("Students", "CreateStudents", "Students")</li>
+                    <lable>/</lable>
+                    <li>@Html.ActionLink("Medicals", "CreateMedical", "Medical")</li>
+                    <lable>/</lable>
+                    <li>@Html.ActionLink("Classes", "CreateClass", "SchoolClass")</li>
+                    <lable>/</lable>
+                    <li>@Html.ActionLink("Guardian", "CreateGuardian", "Guardian")</li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+
+
+        </div>
+    </div>
+   
+    @RenderBody()
+
+    <div class="theformss">
+       
+
+       
+        <div class="clear"></div>
+    </div>
+
+
+</body>
+</html>
+
+

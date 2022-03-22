@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Domain.StudentMedical>
+
+@{
+    ViewBag.Title = "ViewMedical";
+}
+
+<div class="proheader">Edit Session</div>
+<div class="site-form theforms">
+    <table class="ListTable" cellpadding="0" cellspacing="0">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.student.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BloodGroup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genotype)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Allergies)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Weight)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImunizationCardID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BirthCertificateID)
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.student.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BloodGroup)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genotype)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Allergies)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Height)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Weight)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImunizationCardID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BirthCertificateID)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditMedical", new { id = item.ID }) 
+                   
+                   
+                </td>
+                <td>
+                   
+
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    </div>

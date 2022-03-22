@@ -1,0 +1,97 @@
+﻿@model Domain.StudentMedical
+
+@{
+    ViewBag.Title = "CreateMedical";
+}
+
+<div class="proheader">View Guardian</div>
+<div class="site-form theforms">
+
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            
+            @Html.ValidationSummary(true)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.StudentNo, "StudentNo", new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("StudentNo", String.Empty)
+                    @Html.ValidationMessageFor(model => model.StudentNo)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.BloodGroup, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.BloodGroup)
+                    @Html.ValidationMessageFor(model => model.BloodGroup)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Genotype, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Genotype)
+                    @Html.ValidationMessageFor(model => model.Genotype)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Allergies, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Allergies)
+                    @Html.ValidationMessageFor(model => model.Allergies)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Height, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Height)
+                    @Html.ValidationMessageFor(model => model.Height)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Weight, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Weight)
+                    @Html.ValidationMessageFor(model => model.Weight)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ImunizationCardID, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.ImunizationCardID)
+                    @Html.ValidationMessageFor(model => model.ImunizationCardID)
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.BirthCertificateID, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.BirthCertificateID)
+                    @Html.ValidationMessageFor(model => model.BirthCertificateID)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+    </div>
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

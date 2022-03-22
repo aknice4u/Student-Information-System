@@ -1,0 +1,9 @@
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\Business\bin\Debug\Business.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\Business\bin\Debug\Business.pdb
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\Business\bin\Debug\AssignDomain.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\Business\bin\Debug\EntityFramework.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\Business\bin\Debug\AssignDomain.pdb
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\Business\bin\Debug\EntityFramework.xml
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\Business\obj\Debug\Business.csprojResolveAssemblyReference.cache
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\Business\obj\Debug\Business.dll
+C:\Users\Workstation1\Documents\Visual Studio 2013\Projects\Nortify.StudentsInformation\Business\obj\Debug\Business.pdb

@@ -1,0 +1,170 @@
+﻿@model Domain.Guardian
+
+@{
+    ViewBag.Title = "ViewDetails";
+}
+
+<script>
+    $(document).ready(function () {
+        $("tr:even").css("background-color", "#F3F4F5");
+    });
+</script>
+
+<div class="proheader">View Guardian</div>
+<div class="site-form theforms">
+    <table class="profile" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>Title</td>
+            <td>@Html.DisplayNameFor(model => model.Title)</td>
+        </tr>
+
+        <tr>
+            <td>Title</td>
+            <td>@Html.DisplayNameFor(model => model.FirstName)</td>
+        </tr>
+
+        
+        <tr>
+            <td>Title</td>
+            <td>@Html.DisplayNameFor(model => model.LaststName)</td>
+        </tr>
+
+        <tr>
+            <td>Other Names</td>
+            <td>@Html.DisplayNameFor(model => model.OtherNames)</td>
+        </tr>
+
+        <tr>
+            <td>Gender</td>
+            <td>@Html.DisplayNameFor(model => model.Gender)</td>
+        </tr>
+
+        
+        <tr>
+            <td>Religion</td>
+            <td>@Html.DisplayNameFor(model => model.Religion)</td>
+        </tr>
+
+        
+        <tr>
+            <td>Phone</td>
+            <td>@Html.DisplayNameFor(model => model.Phone)</td>
+        </tr>
+
+
+
+        <tr>
+            <td>Email</td>
+            <td>@Html.DisplayNameFor(model => model.Email)</td>
+        </tr>
+
+        <tr>
+            <td>Date Of Birth</td>
+            <td>@Html.DisplayNameFor(model => model.DateOfBirth)</td>
+        </tr>
+
+        <tr>
+            <td>Marital Status</td>
+            <td>@Html.DisplayNameFor(model => model.MaritalStatusID)</td>
+        </tr>
+
+        <tr>
+            <td>Wedding Aniversary</td>
+            <td>@Html.DisplayNameFor(model => model.WeddingAniversary)</td>
+        </tr>
+
+        <tr>
+            <td>Home Address One</td>
+            <td>@Html.DisplayNameFor(model => model.HomeAddressLine1)</td>
+        </tr>
+
+        <tr>
+            <td>Home Address Two</td>
+            <td>@Html.DisplayNameFor(model => model.HomeAddressLine2)</td>
+        </tr>
+        <tr>
+            <td>Country Of Residence</td>
+            <td>@Html.DisplayNameFor(model => model.CountryOfResidenceID)</td>
+        </tr>
+
+        
+        <tr>
+            <td>State Of Residence</td>
+            <td>@Html.DisplayNameFor(model => model.StateOfResidenceID)</td>
+        </tr>
+        <tr>
+            <td>LGA of Residence</td>
+            <td>@Html.DisplayNameFor(model => model.LGAOfResidenceID)</td>
+        </tr>
+
+       
+        <tr>
+            <td>City Of Resisdence</td>
+            <td>@Html.DisplayNameFor(model => model.cityOfResidence)</td>
+        </tr>
+        <tr>
+            <td>Occupation</td>
+            <td>@Html.DisplayNameFor(model => model.Occupation)</td>
+        </tr>
+        <tr>
+            <td>Education</td>
+            <td>@Html.DisplayNameFor(model => model.Eduction)</td>
+        </tr>
+
+        <tr>
+            <td>Relationship</td>
+            <td>@Html.DisplayNameFor(model => model.Relationship)</td>
+        </tr>
+
+        <tr>
+            <td>Office Address One</td>
+            <td>@Html.DisplayNameFor(model => model.OfficeAddressLine1)</td>
+        </tr>
+
+        <tr>
+            <td>Office Address Two</td>
+            <td>@Html.DisplayNameFor(model => model.OfficeAddressLine2)</td>
+        </tr>
+
+        <tr>
+            <td>Office City</td>
+            <td>@Html.DisplayNameFor(model => model.OfficeCity)</td>
+        </tr>
+
+        <tr>
+            <td>Office LGA</td>
+            <td>@Html.DisplayNameFor(model => model.OfficeLGAID)</td>
+        </tr>
+
+        <tr>
+            <td>Home Address One</td>
+            <td>@Html.DisplayNameFor(model => model.OfficeStateID)</td>
+        </tr>
+
+        <tr>
+            <td>Office Country</td>
+            <td>@Html.DisplayNameFor(model => model.OfficeCountryID)</td>
+        </tr>
+
+        <tr>
+            <td>User</td>
+            <td>@Html.DisplayNameFor(model => model.UserID)</td>
+        </tr>
+
+        
+        <tr>
+            <td>Office Phone </td>
+            <td>@Html.DisplayNameFor(model => model.OfficePhone1)</td>
+        </tr>
+
+        <tr>
+            <td>Office Phone 2</td>
+            <td>@Html.DisplayNameFor(model => model.OfficePhone2)</td>
+        </tr>
+
+    </table>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
